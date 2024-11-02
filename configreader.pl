@@ -1,11 +1,29 @@
 #!/usr/bin/perl -w
-####
-# license
-###
 use 5.010;
 use strict;
 use warnings;
 no warnings 'experimental::smartmatch';
+
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+#: Reader for xml-files (configuration-file)
+#:     - choose in list-dialog
+#:     - use commandline for direct execution
+#: uses Zenity for dialogs
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+#: LICENSE
+
+# This is free software, you may use it and distribute it 
+# under the same terms as Perl itself.
+
+# Copyright 2012-2024 slae
+
+#: DISCLAIMER
+
+# THIS PROGRAM IS DISTRIBUTED IN THE HOPE THAT IT WILL BE USEFUL, 
+# BUT WITHOUT ANY WARRANTY; WITHOUT EVEN THE IMPLIED WARRANTY OF 
+# MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.
+#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 use File::Basename;
 use Cwd 'abs_path';
@@ -23,12 +41,6 @@ $VERSION = "1.7001beta"; # 2024-10-28
 
 my $dir_usb = "/media/stefan/"; #??? -> xml
 my $dir_mnt = "/mnt/";
-
-#:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-#: Reader for xml-files (configuration-file)
-#:     - choose in list-dialog
-#:     - use commandline for direct execution
-#: uses Zenity for dialogs
 
 #::: declarations ::::::::::::::#
 #: Define general parameters for this script
