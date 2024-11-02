@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bk-script_options
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="/home/stefan/prog/bakki/Bakki-the-stick/config.xsd">
+
+	<general>
+		<cscrippy_name>Starter BK</cscrippy_name>
+		<versionNr date="2024-10-05">1.7</versionNr>
+		<versionTxt> Now in perl-mode</versionTxt>
+		<lang>de-DE</lang>
+	</general>
+
+	<dialog_cfg>
+		<dialog_title>$cscrippy_name</dialog_title>
+		<dialog_menue>Meld-Vergleich auswählen (v$versionNr$versionTxt)</dialog_menue>
+		<dialog_column_items>[?] #x0020 Backup#x0020Titel</dialog_column_items>
+	</dialog_cfg>
+
+	<directories>
+		<home_dir>/home/stefan</home_dir>
+		<standard_dir>/slae_kim</standard_dir>
+		<storage_dir>/media/stefan</storage_dir>
+		<remote_dir>/mnt/iserv_laettig/Files</remote_dir>
+	</directories>
+
+	<list_cfg>
+		<list_head>vergleiche</list_head>
+		<list_label>ordpaar</list_label>
+		<list_item_tags>_name prog dir1 dir2</list_item_tags>
+		<list_item_exec_order> 0001 2 3 </list_item_exec_order>
+
+		<list_prog_id>98</list_prog_id>
+		<list_prog_strg>Just meld</list_prog_strg>
+		<std_program>meld </std_program>
+
+		<list_config_id>99</list_config_id>
+		<list_config_strg>Einstellungen</list_config_strg>
+		<editor_program>gedit $xml_file_name </editor_program>
+	</list_cfg>
+
+	<vergleiche>
+		<ordpaar id="00">
+			<_name>SLAE01</_name>
+			<prog>$std_program</prog>
+			<dir1> ~$standard_dir</dir1>
+			<dir2> $storage_dir/SLAE01/slaekim</dir2>
+		</ordpaar>
+		<ordpaar id="01">
+			<_name>iserv USR</_name>
+			<prog>$std_program</prog>
+			<dir1> ~$standard_dir/usr</dir1>
+			<dir2> $remote_dir/usr</dir2>
+		</ordpaar>
+		<ordpaar id="02">
+			<_name>iserv unt</_name>
+			<prog>$std_program</prog>
+			<dir1> ~/slae_unt</dir1>
+			<dir2> $remote_dir/unt</dir2>
+		</ordpaar>
+		<ordpaar id="03">
+			<_name>iserv Ausdruck</_name>
+			<prog>$std_program</prog>
+			<dir1> ~$standard_dir/ausdruck</dir1>
+			<dir2> $remote_dir/ausdruck</dir2>
+		</ordpaar>
+		<ordpaar  id="04">
+			<_name>Shuffle nach unten</_name>
+			<prog>$std_program</prog>
+			<dir1> ~/slae_kim/abf</dir1>
+			<dir2> $home_dir/slae_unt</dir2>
+		</ordpaar>
+		<ordpaar id="05">
+			<_name>SLAE03</_name>
+			<prog>$std_program</prog>
+			<dir1> ~$standard_dir</dir1>
+			<dir2> $storage_dir/SLAE03/slaekim</dir2>
+		</ordpaar>
+		<ordpaar id="06">
+			<_name>Keepass</_name>
+			<prog>$std_program</prog>
+			<dir1> ~/.door3</dir1>
+			<dir2> $remote_dir/kp/myt</dir2>
+		</ordpaar>
+		<ordpaar id="77">
+			<_name>KIMocloud_td</_name>
+			<prog>$std_program</prog>
+			<dir1> $empty</dir1>
+			<dir2> $empty</dir2>
+		</ordpaar>
+<!--
+<ordpaar>
+		<id>08</id>
+		<_name>Literatur:\-\-\>SLAE01/slae_lit</_name>
+		<dir1> ~$stdpath/.lit   </dir1>
+		<dir2> $stickort/SLAE01/slae_lit</dir2>
+		</ordpaar>
+
+		<ordpaar>
+		<id>15</id>
+		<_name>BK_dokumente_td</_name>
+		<dir1> ~/dokumente</dir1>
+		<dir2> /mnt/NAS_francois/dokumente</dir2>
+		</ordpaar>
+
+		<ordpaar>
+		<id>20</id>
+		<_name>rsync_push_td</_name>
+		<dir1> #sfs</dir1>
+		<dir2> $empty</dir2>
+		</ordpaar>
+-->
+	</vergleiche>
+</bk-script_options>
+<!-- Ende des XML-Dokumentes -->
+
