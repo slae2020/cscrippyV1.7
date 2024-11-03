@@ -32,7 +32,7 @@ use Getopt::Long qw(GetOptions :config no_ignore_case );
 
 use Data::Dumper; # nur für test ausgaben
 
-use lib "/home/stefan/prog/bakki/cscrippy/";
+use lib "/home/stefan/prog/bakki/cscrippy/cscrippy/"; # ?????
 use Uupm::Dialog;
 #use Uupm::Checker;
 use Sys::Filesystem ();
@@ -520,6 +520,8 @@ sub ensure_path_readability {
     my ($path) = @_;
     my $short;
 
+set_dialog_item ('window_size' , 150 , 400 , '');  # ??? mit test falscher Pfad kein Mweldfenster oder Default nicht bekannt hieer
+#set_dialog_item ('window_size' , $dialog_defaults{window_size}[0] , $dialog_defaults{window_size}[1] , '');        
     if ($path =~ /\// ) {
         $path =~ s/^\s+|\s+$//g ;
         if ($path =~ /$dir_mnt/) {

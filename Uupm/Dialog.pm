@@ -255,7 +255,8 @@ sub ask_to_continue {
             height  => $dialog_config{window_size}[0],
             width   => $dialog_config{window_size}[1]
         );
-		set_dialog_item ('window_size' , '' , '' , '');
+		#set_dialog_item ('window_size' , '' , '' , '');
+		#set_dialog_item ('window_size' , $dialog_defaults{window_size}[0] , $dialog_defaults{window_size}[1] , '');        
     };
     if ($@) {
         warn "Error displaying notification: $@";
@@ -285,7 +286,8 @@ sub ask_to_choose {
                     column3 => $dialog_config{columns}[2],
                     list    => $dialog_config{list}
                   );
-        set_dialog_item ('window_size' , '' , '' , '');
+        #set_dialog_item ('window_size' , '' , '' , '');
+        #set_dialog_item ('window_size' , $dialog_defaults{window_size}[0] , $dialog_defaults{window_size}[1] , '');        
     };
     if ($@) {
             warn "Error with checklist: $@";
